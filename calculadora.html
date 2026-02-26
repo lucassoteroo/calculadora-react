@@ -37,7 +37,7 @@
         }
     </style>
 </head>
-<body class="text-(--text) font-(--font-sans)">
+<body class="min-h-screen text-(--text) font-(--font-sans)">
     <div id="root"></div>
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -175,7 +175,7 @@
 
         function OperationHistory() {
             return (
-                <Card className="py-10 px-10">
+                <Card className=" w-full py-10 px-10">
                     <Text
                         as="h1"
                         variant="heading"
@@ -195,7 +195,12 @@
 
         function App() {
             return (
-                <main className="py-28 px-4">
+                <main className={`
+                    py-28 px-4 sm:px-10
+                    flex flex-col sm:flex-row
+                    items-center sm:items-stretch
+                    gap-2
+                `}>
                     <Calculator />
                     <OperationHistory />
                 </main>
